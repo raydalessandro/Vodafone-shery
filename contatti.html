@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contatti | Vodafone Store Monza Brianza</title>
+  <meta name="description" content="Contattaci: telefono, WhatsApp, email, indirizzo e orari. Prenota il tuo appuntamento in store.">
+  <link rel="canonical" href="https://www.esempio-dominio.it/contatti.html">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenuto">Salta al contenuto</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="images/logo-vodafone-authorized.svg" width="140" height="32" alt="Vodafone Rivenditore Autorizzato"></a>
+      <nav class="site-nav" aria-label="Navigazione principale">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+        <ul id="menu" class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chi-siamo.html">Chi Siamo</a></li>
+          <li><a href="servizi.html">Servizi</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a aria-current="page" href="contatti.html">Contatti</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenuto" class="page">
+    <nav aria-label="Breadcrumb" class="breadcrumbs">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li aria-current="page">Contatti</li>
+      </ol>
+    </nav>
+
+    <section class="section">
+      <div class="container">
+        <h1>Contattaci</h1>
+        <div class="grid-2">
+          <div class="contact-card">
+            <h2>Dati negozio</h2>
+            <ul class="contact-list">
+              <li>Telefono: <a href="tel:+39039999999">+39 039 999 999</a></li>
+              <li>WhatsApp: <a href="https://wa.me/39333111222" target="_blank" rel="noopener">+39 333 111 1222</a></li>
+              <li>Email: <a href="mailto:info@esempio-dominio.it">info@esempio-dominio.it</a></li>
+              <li>Indirizzo: Via Esempio 12, 20900 Monza (MB)</li>
+            </ul>
+            <h3>Orari</h3>
+            <ul class="hours">
+              <li>Lun–Ven: 09:30–19:30</li>
+              <li>Sab: 10:00–18:00</li>
+              <li>Dom: chiuso</li>
+            </ul>
+            <div class="map-placeholder" role="img" aria-label="Mappa posizione negozio">Mappa (statica)</div>
+          </div>
+
+          <div class="contact-form-wrapper" id="form">
+            <h2>Scrivici ora</h2>
+            <form class="contact-form" action="#" method="post" novalidate>
+              <label>Nome <input type="text" name="name" required autocomplete="name" aria-required="true"></label>
+              <label>Email <input type="email" name="email" required autocomplete="email" aria-required="true"></label>
+              <label>Telefono <input type="tel" name="phone" autocomplete="tel"></label>
+              <label>Messaggio <textarea name="message" rows="5" required aria-required="true"></textarea></label>
+              <label class="consent">
+                <input type="checkbox" required aria-required="true"> Ho letto e accetto la <a href="privacy.html">Privacy Policy</a>.
+              </label>
+              <button class="btn btn-primary" type="submit">Invia richiesta</button>
+              <p class="small-note">Oppure <a href="https://wa.me/39333111222" target="_blank" rel="noopener">scrivici su WhatsApp</a>.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+      </div>
+      <p class="legal small-note">© <span id="year"></span> Nome Negozio — Monza Brianza</p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-fab" href="https://wa.me/39333111222" target="_blank" rel="noopener" aria-label="Chat WhatsApp"><span aria-hidden="true">💬</span></a>
+  <script src="scripts/script.js" defer></script>
+</body>
+</html>
