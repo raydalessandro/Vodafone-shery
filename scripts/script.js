@@ -4,21 +4,35 @@ const $$ = (s, ctx=document) => Array.from(ctx.querySelectorAll(s));
 
 // Year in footer
 (() => {
-  const y = new Date().getFullYear();
-  const el = $$('#year');
-  el.forEach(n => n.textContent = y);
+  document.querySelectorAll('#year').forEach(n => n.textContent = new Date().getFullYear());
+})();
+
+// evidenzia menù attivo automaticamente se manca aria-current
+(() => {
+  const path = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.site-nav .menu a').forEach(a=>{
+    const href = a.getAttribute('href');
+    if(!a.hasAttribute('aria-current') && href === path){
+      a.setAttribute('aria-current','page');
+    }
+  });
 })();
 
 // Mobile nav toggle
 (() => {
-  const btn = $('.nav-toggle');
-  const menu = $('#menu');
-  if (!btn || !menu) return;
-  btn.addEventListener('click', () => {
-    const isOpen = menu.classList.toggle('open');
-    btn.setAttribute('aria-expanded', String(isOpen));
+  const btn = document.querySelector('.nav-toggle');
+  const menu = document.getElementById('menu');
+  if(!btn || !menu) return;
+  btn.addEventListener('click', ()=>{
+    const open = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
   });
 })();
+
+// lazy attr safety
+document.querySelectorAll('img:not([loading])').forEach(img=>{
+  img.setAttribute('loading','lazy'); img.setAttribute('decoding','async');
+});
 
 // Smooth anchor focus
 (() => {
